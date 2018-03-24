@@ -1,0 +1,303 @@
+<html>
+  <head>
+    <title>Subsscrypto Extension</title>
+    <script src="popup.js"></script>
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>  
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	 <!-- jQuery library -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	  <!-- Latest compiled JavaScript -->	
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+	<style>
+		body{
+   			width:300px;
+   			height:320px;
+			background-color: #f2f2f2;
+   			}
+		#slot{
+			width:290px;
+			height:55px;
+			background-color:#cecece;
+			border-radius: 9px;
+			
+		}
+		@font-face {
+    		font-family: truenoBold;
+    		src: url(truenosbdit.otf);
+		  	}
+		  @font-face {
+    		font-family: avenirLight;
+    		src: url(AvenirLTStd-LightOblique.otf);
+		  	}
+		  @font-face {
+    		font-family: avenirBold;
+    		src: url(AvenirLTStd-Medium.otf);
+		  	}
+		#titles{
+			font-family: truenoBold;
+			font-size: 16px;
+			padding-top: 2px;
+			color: black;
+			margin: 0;
+			
+		}
+		
+		#subtitles{
+			font-family: avenirLight;
+			font-size: 10px;
+			padding-top: 0px;
+			color: black;
+			margin: 0;
+			
+		}
+		#contenedoruno{
+			padding-top: 1.5px;
+			padding-right:1px;
+		}
+		#maintable{
+			
+		}
+		#textuno{
+			  font-family:avenirLight;
+			  text-decoration: underline;
+			  padding-top: 8px;
+			  font-size: 13px
+		  }
+		#containertres{
+			float: left;
+			padding-left: 180px;
+			padding-top: 10px;
+		}
+		#texttres{
+			font-family: avenirBold;
+			font-size: 12px;
+			padding-top: 7px;
+			padding-right: 2px;
+		}
+.onoffswitch {
+    position: relative; width: 75px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #595959; border-radius: 12px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 47px; padding: 0; line-height: 47px;
+    font-size: 11px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "";
+    padding-left: 8px;
+    background-color: #57C98E; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 8px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 17px; margin: 15px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 24px;
+    border: 2px solid #595959; border-radius: 12px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+	</style>  
+  </head>
+  <body>
+	  <center>
+	  <table id="maintable">
+		  <tr height="10">
+			  <td> 
+				  <div id="containertres">
+				  <table border="0">
+					  <tr>
+						  <td> <img src ="icondos.png" width="20"> </td>
+						  <td> <p id="texttres">   10 | </p> </td>
+						  <td> <p id="texttres"> Socrates </p></td>
+					  </tr>
+				  </table>
+					  </div>
+			  </td>
+				  
+		  
+		  </tr>
+		  
+		  <tr>
+			  <td>
+			  		<p id="titles"> Your subscriptions</p>
+			  </td>
+		  
+		  </tr>
+		  <tr>
+		  	<td height="3px"> </td>
+		  </tr>
+		  
+		  <tr style="padding-top: 1.5em;">
+		  	 <td> 
+				 <div id="slot">
+					 <center>
+					 <table border = "0" width="290" height="50" margin="2">
+						 <tr>
+							 <td width = "20%">
+								 <center>
+								 <img src ="netflixicon.png" height="40" id = "logo">
+								</center>	 
+							 </td>
+							 
+							 <td width = "50%">
+							  	<p id = "titles"> Netflix Account</p>
+							 	<p id = "subtitles"> Monthly price: 2 subscryptons</p>	
+							 </td>
+							 
+							 <td width = "20%" height = "90%">
+							 <center>
+								 <div height = 30 id="contenedoruno">
+								 <div class="onoffswitch">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
+								 </div>
+								 
+							 </center>
+							 </td>
+						 </tr>
+					 
+					 </table>
+					</center>	 
+				 </div>
+			  </td>
+		  </tr>
+		  
+		   <tr>
+		  	 <td style="padding-top: .5em;"> 
+			  		<p id="titles"> Shared subscriptions</p>
+			   </td>
+		  </tr>
+		  <tr>
+		  	<td height="3px"> </td>
+		  </tr>
+		  <tr>
+		  
+		   <tr>
+		  	 <td> 
+				 <div id="slot">
+					 <center>
+					 <table border = "0" width="290" height="50" margin="2">
+						 <tr>
+							 <td width = "20%">
+								 <center>
+								 <img src ="nyticon.png" height="40" id = "logo">
+								</center>	 
+							 </td>
+							 
+							 <td width = "50%">
+							  	<p id = "titles"> NYT Account</p>
+							 	<p id = "subtitles"> Monthly price: 1 subscryptons</p>	
+							 </td>
+							 
+							 <td width = "20%" height = "90%">
+							 <center>
+								 <div height = 30 id="contenedoruno">
+								 <div class="onoffswitch">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch3" checked>
+    <label class="onoffswitch-label" for="myonoffswitch3">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
+								 </div>
+								 
+							 </center>
+							 </td>
+						 </tr>
+					 
+					 </table>
+					</center>	 
+				 </div>
+			   </td>
+		  </tr>
+		  <tr>
+		  	<td height="7px"> </td>
+		  </tr>
+		  <tr>
+		  	 <td> 
+				 <div id="slot">
+					 <center>
+					 <table border = "0" width="290" height="50" margin="2">
+						 <tr>
+							 <td width = "20%">
+								 <center>
+								 <img src ="spotifyicon.png" height="40" id = "logo">
+								</center>	 
+							 </td>
+							 
+							 <td width = "50%">
+							  	<p id = "titles"> Spotify Account</p>
+							 	<p id = "subtitles"> Monthly price: 3 subscryptons</p>	
+							 </td>
+							 
+							 <td width = "20%" height = "90%">
+							 <center>
+								 <div height = 30 id="contenedoruno">
+								 <div class="onoffswitch">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2" checked>
+    <label class="onoffswitch-label" for="myonoffswitch2">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
+								 </div>
+								 
+							 </center>
+							 </td>
+						 </tr>
+					 
+					 </table>
+					</center>	 
+				 </div>
+			   </td>
+		  </tr>
+		  <tr>
+		  	<td height="15px"> </td>
+		  </tr>
+		  <tr>
+			  
+		<tr>
+		  	<td> 
+			<center>
+			<p id="textuno" > Explore more options </p>
+			</center>		
+			</td>
+		  </tr>
+		  <tr>	  
+		  
+		  
+		  
+	  </table>
+	</center>	  
+  </body>
+</html>
