@@ -6,6 +6,8 @@ public class Subscription {
 	}
 	
 	Type type;
+	Account account;
+	User owner;
 	
 	public Subscription (Type type) {
 		this.type = type;

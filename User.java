@@ -16,13 +16,23 @@ public class User {
 		this.accounts.add(newAccount);
 	}
 	
-	private void addSubscription(Subscription newSubscription) {
+	public void removeAccount(Account newAccount) {
+		this.accounts.remove(newAccount);
+	}
+	
+	public void addSubscription(Subscription newSubscription) {
 		this.subscriptions.add(newSubscription);
 	}
 	
+	public void removeSubscription(Subscription newSubscription) {
+		this.subscriptions.remove(newSubscription);
+	}
+	
 	public void requestSubscription(Subscription newSubscription) {
-		
-		
+		Matching.getInstance().addSubscription(newSubscription, true);
+	}
+	
+	public void getPayment() {
 		
 	}
 }

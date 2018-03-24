@@ -41,25 +41,25 @@ public class Matching {
 	    	}
 	    }
 	    
-	   private void findMatchNetFlix() {
+	   private void findMatch() {
+		   
 	    	for(Subscription wanted: NetFlixRequest) {
 	    		if(NetFlixAvailable.size()!=0) {
 	  
-	    			NetFlixRequest.remove();
-	    			NetFlixAvailable.remove();
+	    			Subscription a = NetFlixRequest.remove();
+	    			Subscription b = NetFlixAvailable.remove();
+	    			a.owner.addSubscription(a);
+	    			b.account.owner.getPayment();
+	    		
 	    		}
 	    	}
-	    }
-	   
-	   private void findMatchSpotify() {
 	    	for(Subscription wanted: SpotifyRequest) {
 	    		if(SpotifyAvailable.size()!=0) {
 	  
 	    			SpotifyRequest.remove();
 	    			SpotifyAvailable.remove();
+	    			
 	    		}
 	    	}
 	    }
-
-
 }
