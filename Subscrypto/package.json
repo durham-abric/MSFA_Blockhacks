@@ -1,0 +1,24 @@
+{
+  "name": "subscrypto",
+  "version": "1.0.0",
+  "description": "Ethereum-based token for peer-to-peer subscription service sharing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/durham-abric/MSFA_Blockhacks.git"
+  },
+  "keywords": [
+    "Token",
+    "Crypto",
+    "Ethereum"
+  ],
+  "author": "Durham Abric",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/durham-abric/MSFA_Blockhacks/issues"
+  },
+  "homepage": "https://github.com/durham-abric/MSFA_Blockhacks#readme"
+}
