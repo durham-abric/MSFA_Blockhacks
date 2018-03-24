@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html>
+  <head>
+	  
+    <title>Subsscrypto Extension</title>
+    <script src="popup.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	 <!-- jQuery library -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	  <!-- Latest compiled JavaScript -->	
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  
+	  <style>
+		body{
+   			width:300px;
+   			height:320px;
+			background-color: #f2f2f2;
+   			}
+		  #logo{
+			  margin-top: 20px;
+			  margin-bottom: 12px;
+		  } 
+		  @font-face {
+    		font-family: truenoBold;
+    		src: url(truenosbdit.otf);
+		  	}
+		  @font-face {
+    		font-family: avenirLight;
+    		src: url(AvenirLTStd-LightOblique.otf);
+		  	}
+		  @font-face {
+    		font-family: avenirBold;
+    		src: url(AvenirLTStd-Medium.otf);
+		  	}
+		  #boton{
+			  width:130px;
+			  height: 40px;
+			  background-color: #c61919 !important;
+			  border-color: #c61919 !important;
+			  font-family: TruenoBold;
+			  margin-top: 3px;
+			  margin-left: 5px;
+			  
+		  }
+		  #textuno{
+			  font-family:avenirLight;
+			  text-decoration: underline;
+			  padding-top: 8px;
+		  }
+		  #forminput{
+			  width:270px;
+			  height: 45px;
+			  margin-top:0px;
+			  margin-bottom:8px;
+			
+		  }
+		  #inputlabels{
+			  font-family:avenirBold;
+			  font-weight: bold;
+		  }
+	</style> 
+  </head>
+  <body>
+    <center>
+	<img src ="lineal.png" width="280" id = "logo">
+	</center>	
+	 <center>	
+	<table>
+		<tr>
+			<td> <p id="inputlabels"> Email </p> </td>
+		</tr>
+		<tr>
+			
+			<td><input type="email" id = "forminput" class="form-control" aria-describedby="emailHelp" placeholder="Enter email or username"> </td>
+		</tr>
+		<tr>
+			<td> <p id="inputlabels"> Password </p> </td>
+		</tr>
+		<tr>
+			<td>
+				<input type="password" class="form-control" id="forminput" placeholder="Password">
+			</td>
+		</tr>
+		
+	</table>	 
+	
+	
+		 
+	<table>
+	<tr>
+		
+		<td> 
+			<a href="slots.html"> 
+			<button type="button" class="btn btn-primary btn-lg btn-block" id="boton">LOGIN</button>
+			</a>	
+				
+		</td>
+		<td> <button type="button" class="btn btn-primary btn-lg btn-block" id="boton">SIGN UP</button></td>
+	</tr>	
+	</table>
+	
+	<p id="textuno"> I forgot my password</p>	
+	</center>  	
+
+  </body>
+</html>
